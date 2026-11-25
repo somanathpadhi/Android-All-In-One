@@ -31,8 +31,9 @@ fun PostScreen(
 
             is UiState.Success -> {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(items = state.data,
-                        key = {post -> post.id}) {
+                    items(
+                        items = state.data,
+                        key = { post -> post.id }) {
                         Card(
                             modifier = Modifier.padding(8.dp),
                             shape = CardDefaults.elevatedShape
